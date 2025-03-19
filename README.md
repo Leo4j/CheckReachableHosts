@@ -17,6 +17,12 @@ CheckReachableHosts
 CheckReachableHosts -WMI
 ```
 ```
+CheckReachableHosts -winrm
+```
+```
+CheckReachableHosts -Port 135
+```
+```
 CheckReachableHosts -Targets c:\Users\user\machines.txt
 ```
 ```
