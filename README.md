@@ -1,6 +1,6 @@
 # CheckReachableHosts
 
-Check what hosts are reachable (SMB or WMI)
+Check what hosts are reachable (SMB, WMI, WinRM, or specified port)
 
 ## Load in memory
 
