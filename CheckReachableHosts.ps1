@@ -3,7 +3,9 @@ function CheckReachableHosts {
 		[string]$Domain,
 		[string]$DomainController,
 		[string]$Targets,
-		[switch]$WMI
+		[int]$Port,
+		[switch]$WMI,
+		[switch]$winrm
 	)
 	
 	if(!$Targets){
@@ -81,6 +83,8 @@ function CheckReachableHosts {
 	}
 	
 	if($WMI){$Port = 135}
+	elseif($winrm){$Port = 5985}
+	elseif($Port){}
 	else{$Port = 445}
 	
 	# Initialize the runspace pool
